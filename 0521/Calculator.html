@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>成績判斷</h2>
+
+<p>
+    <input type="number" id="score">    
+    <button onclick="judge()">確定</button>
+</p>
+
+    <p>結果：</p>
+    <p id="demo"></p>
+
+    <script>
+    function judge() {
+	    score = document.getElementById("score").value;
+        result="";//JS不能用else if 'O'
+        if(score>59&&score<=100){
+            result="及格"
+        }
+        if(score<60){
+            result="不及格"
+        }
+        if(score>100){
+            result="cheat??"
+        }
+        document.getElementById("demo").innerHTML=result;
+    }
+    </script>
+</body>
+</html>
